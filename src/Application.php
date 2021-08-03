@@ -14,7 +14,7 @@ use Keacefull\MeituanShangou\Request\Poi;
 use Keacefull\MeituanShangou\Request\Retail;
 use Keacefull\MeituanShangou\Request\Shipping;
 use Exception;
-use GuzzleHttp\Client;
+use Symfony\Component\HttpClient\HttpClient;
 
 /**
  * Class Application.
@@ -38,7 +38,7 @@ class Application
     public function __construct($config)
     {
         $this->config = new Config($config);
-        $this->client = new Client();
+        $this->client = HttpClient::create();
     }
 
     public function setHttpClient($client): self
@@ -52,7 +52,7 @@ class Application
     {
         if (! isset($this->$name)) {
             $class_name = ucfirst($name);
-            $application = "\\Abbotton\\MeituanTakeaway\\Request\\{$class_name}";
+            $application = "\\Keacefull\\MeituanShangou\\Request\\{$class_name}";
             if (! class_exists($application)) {
                 throw new Exception($class_name.'不存在');
             }

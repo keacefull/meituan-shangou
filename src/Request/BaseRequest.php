@@ -7,7 +7,6 @@ use Keacefull\MeituanShangou\Config;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\Cache\Psr16Cache;
 use Psr\SimpleCache\CacheInterface;
-use Symfony\Component\HttpClient\HttpClient;
 
 class BaseRequest
 {
@@ -23,7 +22,7 @@ class BaseRequest
     public function __construct(Config $config, $client)
     {
         $this->config = $config;
-        $this->client = HttpClient::create();
+        $this->client = $client;
         $this->cache = new Psr16Cache(new FilesystemAdapter(namespace: 'meituanshaoshou', defaultLifetime: 1500));
     }
 
