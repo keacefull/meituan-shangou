@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 
 namespace Keacefull\MeituanShangou\Request;
 
@@ -31,15 +30,19 @@ class BaseRequest
         $params_head = [
             'timestamp' => time(),
             'app_id' => $this->config->app_id,
+            'app_poi_code' => $this->config->app_poi_code
         ];
-        $options['access_token'] = $this->getToken();
+        if (isset($options['response_type']) && $options['response_type'] != 'token')
+        {
+            $options['access_token'] = $this->getToken();
+        }
         $options = array_merge($params_head, $options);
         $sig = $this->generateSignature($this->config->request_url.$action, $options);
         $options['sig'] = $sig;
 
         $url = $this->config->request_url.$action;
 
-        return $this->client->request("GET", ltrim($url, '/'), ['query' => $options]);
+        return $this->client->request("GET", ltrim($url, '/'), ['query' => $options])->toArray();
     }
 
     private function generateSignature($action, $params)
@@ -69,14 +72,14 @@ class BaseRequest
         $params_head = [
             'timestamp' => time(),
             'app_id' => $this->config->app_id,
+            'app_poi_code' => $this->config->app_poi_code
         ];
-
         $params = array_merge($params_head, $params);
         $params['access_token'] = $this->getToken();
         $url = $this->config->request_url.$action;
         $sig = $this->generateSignature($url, $params);
         $params['sig'] = $sig;
-        return $this->client->request("POST", ltrim($url, '/'), ['form_params' => $params]);
+        return $this->client->request("POST", ltrim($url, '/'), ['body' => $params])->toArray();
     }
 
 
@@ -89,10 +92,9 @@ class BaseRequest
 
         $response = $this->get('oauth/authorize',
             [
-                'app_poi_code' => $this->config['app_poi_code'],
                 'response_type' => 'token'
             ]
-        )->toArray();
+        );
 
         if (empty($response['access_token'])) {
             throw new \Exception('Failed to get access_token.');
