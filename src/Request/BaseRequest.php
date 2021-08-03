@@ -90,7 +90,7 @@ class BaseRequest
 
         $response = $this->get('oauth/authorize',
             [
-                'app_poi_code' => '6778_2694666',
+                'app_poi_code' => $this->config['app_poi_code'],
                 'response_type' => 'token'
             ]
         )->toArray();

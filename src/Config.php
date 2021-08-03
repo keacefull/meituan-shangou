@@ -8,6 +8,7 @@ class Config
 {
     public $app_id;
     public $app_secret;
+    public $app_poi_code;
     public $request_url = 'https://waimaiopen.meituan.com/api/v1/';
 
     public function __construct($config)
@@ -24,8 +25,13 @@ class Config
             throw new Exception('app_secret不存在');
         }
 
+        if (! isset($config['app_poi_code']) || $config['app_poi_code'] === '') {
+            throw new Exception('app_poi_code不存在');
+        }
+
         $this->app_id = $config['app_id'];
         $this->app_secret = $config['app_secret'];
+        $this->app_poi_code = $config['app_poi_code'];
 
         if (! empty($config['request_url'])) {
             $this->request_url = $config['request_url'];
