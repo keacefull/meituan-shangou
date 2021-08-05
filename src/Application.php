@@ -13,6 +13,7 @@ use Keacefull\MeituanShangou\Request\Order;
 use Keacefull\MeituanShangou\Request\Poi;
 use Keacefull\MeituanShangou\Request\Retail;
 use Keacefull\MeituanShangou\Request\Shipping;
+use Keacefull\MeituanShangou\Request\Token;
 use Exception;
 use Symfony\Component\HttpClient\HttpClient;
 
@@ -30,6 +31,7 @@ use Symfony\Component\HttpClient\HttpClient;
  * @property GroupBuy $groupBuy
  * @property Im $im
  * @property Goods $goods
+ * @property Token $token
  */
 class Application
 {
