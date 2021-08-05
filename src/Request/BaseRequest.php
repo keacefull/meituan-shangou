@@ -32,7 +32,7 @@ class BaseRequest
             'app_id' => $this->config->app_id,
             'app_poi_code' => $this->config->app_poi_code
         ];
-        if (isset($options['response_type']) && $options['response_type'] != 'token')
+        if (!isset($options['response_type']) || $options['response_type'] != 'token')
         {
             $options['access_token'] = $this->getToken();
         }
