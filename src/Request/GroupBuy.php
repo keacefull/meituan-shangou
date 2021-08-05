@@ -8,7 +8,7 @@ class GroupBuy extends BaseRequest
      * 同步配送信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function perform(array $params)
     {
@@ -19,7 +19,7 @@ class GroupBuy extends BaseRequest
      * 查询订单退款信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getRefundInfo(array $params)
     {
@@ -30,7 +30,7 @@ class GroupBuy extends BaseRequest
      * 批量查询订单退款信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchGetRefundInfo(array $params)
     {
@@ -41,7 +41,7 @@ class GroupBuy extends BaseRequest
      * 批量查询订单状态信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchGetStatus(array $params)
     {
@@ -52,7 +52,7 @@ class GroupBuy extends BaseRequest
      * 查询订单详情信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function detail(array $params)
     {
@@ -63,7 +63,7 @@ class GroupBuy extends BaseRequest
      * 查询门店订单列表信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function list(array $params)
     {

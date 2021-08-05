@@ -8,7 +8,7 @@ class Order extends BaseRequest
      * 设订单为商家已收到.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function received(array $params)
     {
@@ -19,7 +19,7 @@ class Order extends BaseRequest
      * 商家确认订单.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function confirm(array $params)
     {
@@ -30,7 +30,7 @@ class Order extends BaseRequest
      * 商家取消订单.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function cancel(array $params)
     {
@@ -41,7 +41,7 @@ class Order extends BaseRequest
      * 自配订单配送中.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function delivering(array $params)
     {
@@ -52,7 +52,7 @@ class Order extends BaseRequest
      * 自配订单已送达.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function arrived(array $params)
     {
@@ -63,7 +63,7 @@ class Order extends BaseRequest
      * 订单确认退款请求
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function refundAgree(array $params)
     {
@@ -74,7 +74,7 @@ class Order extends BaseRequest
      * 驳回订单退款申请.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function refundReject(array $params)
     {
@@ -85,7 +85,7 @@ class Order extends BaseRequest
      * 查询订单状态
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function viewStatus(array $params)
     {
@@ -96,7 +96,7 @@ class Order extends BaseRequest
      * 获取订单详细信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getOrderDetail(array $params)
     {
@@ -107,7 +107,7 @@ class Order extends BaseRequest
      * 下发美团配送订单.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function logisticsPush(array $params)
     {
@@ -118,7 +118,7 @@ class Order extends BaseRequest
      * 取消美团配送订单.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function logisticsCancel(array $params)
     {
@@ -129,7 +129,7 @@ class Order extends BaseRequest
      * 获取订单配送状态
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function logisticsStatus(array $params)
     {
@@ -140,7 +140,7 @@ class Order extends BaseRequest
      * 获取当日最新订单流水号.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getOrderDaySeq(array $params)
     {
@@ -151,7 +151,7 @@ class Order extends BaseRequest
      * 根据流水号获取订单ID.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getOrderIdByDaySeq(array $params)
     {
@@ -162,7 +162,7 @@ class Order extends BaseRequest
      * 批量查询众包配送费.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function zhongBaoShippingFee(array $params)
     {
@@ -173,7 +173,7 @@ class Order extends BaseRequest
      * 众包发配送
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function zhongBaoDispatch(array $params)
     {
@@ -184,7 +184,7 @@ class Order extends BaseRequest
      * 众包配送单追加小费.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function zhongBaoUpdateTip(array $params)
     {
@@ -195,7 +195,7 @@ class Order extends BaseRequest
      * 查询可被部分退款的商品详情.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getPartRefundFoods(array $params)
     {
@@ -206,7 +206,7 @@ class Order extends BaseRequest
      * 发起部分退款.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function applyPartRefund(array $params)
     {
@@ -217,7 +217,7 @@ class Order extends BaseRequest
      * 催单回复接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function remindReply(array $params)
     {
@@ -228,7 +228,7 @@ class Order extends BaseRequest
      * 商家确认已完成拣货.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function preparationMealComplete(array $params)
     {
@@ -239,7 +239,7 @@ class Order extends BaseRequest
      * 商家获取备货时长
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getPreparationMealTime(array $params)
     {
@@ -250,7 +250,7 @@ class Order extends BaseRequest
      * 拉取用户真实手机号.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchPullPhoneNumber(array $params)
     {
@@ -261,7 +261,7 @@ class Order extends BaseRequest
      * 查询可申请货损赔付的订单.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getSupportedCompensation(array $params)
     {
@@ -272,7 +272,7 @@ class Order extends BaseRequest
      * 申请货损赔付.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function applyCompensation(array $params)
     {
@@ -283,7 +283,7 @@ class Order extends BaseRequest
      * 查询货损赔付结果.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getCompensationResult(array $params)
     {
@@ -294,7 +294,7 @@ class Order extends BaseRequest
      * 专快混配送转为商家自配送
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function logisticsChangePoiSelf(array $params)
     {
@@ -305,7 +305,7 @@ class Order extends BaseRequest
      * 批量拉取异常订单.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchFetchAbnormalOrder(array $params)
     {
@@ -316,7 +316,7 @@ class Order extends BaseRequest
      * 获取订单退款记录.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function ecommerceOrderGetOrderRefundDetail(array $params)
     {
@@ -327,7 +327,7 @@ class Order extends BaseRequest
      * 查询订单中的活动信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function ecommerceOrderGetOrderActDetail(array $params)
     {
@@ -338,7 +338,7 @@ class Order extends BaseRequest
      * 根据流水号获取订单ID.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function ecommerceOrderGetOrderIdByDaySeq(array $params)
     {
@@ -349,7 +349,7 @@ class Order extends BaseRequest
      * 自配送商家同步配送信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function ecommerceOrderLogisticsSync(array $params)
     {
@@ -360,7 +360,7 @@ class Order extends BaseRequest
      * 快递配送商家同步配送信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function ecommerceOrderLogisticsBtocSync(array $params)
     {
@@ -371,7 +371,7 @@ class Order extends BaseRequest
      * 批量查询客服赔付商家责任订单信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchCompensationOrder(array $params)
     {
@@ -382,7 +382,7 @@ class Order extends BaseRequest
      * 拉取骑手真实手机号.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getRiderInfoPhoneNumber(array $params)
     {
@@ -393,7 +393,7 @@ class Order extends BaseRequest
      * 售后审查接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function ecommerceOrderReviewAfterSales(array $params)
     {
@@ -404,7 +404,7 @@ class Order extends BaseRequest
      * 获取取消跑腿配送原因列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getCancelDeliveryReason(array $params)
     {
@@ -415,7 +415,7 @@ class Order extends BaseRequest
      * 取消跑腿配送
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function cancelLogisticsByWmOrderId(array $params)
     {
@@ -426,7 +426,7 @@ class Order extends BaseRequest
      * 查询门店售后订单列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getAfterSaleOrders(array $params)
     {
@@ -437,7 +437,7 @@ class Order extends BaseRequest
      * 按克重退差价的金额预览.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getUnitPartRefundPreview(array $params)
     {
@@ -448,7 +448,7 @@ class Order extends BaseRequest
      * 同步配送信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function perform(array $params)
     {
@@ -459,7 +459,7 @@ class Order extends BaseRequest
      * 查询订单退款信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getRefundInfo(array $params)
     {
@@ -470,7 +470,7 @@ class Order extends BaseRequest
      * 批量查询订单退款信息接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchGetRefundInfo(array $params)
     {
@@ -481,7 +481,7 @@ class Order extends BaseRequest
      * 批量查询订单状态信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchGetStatus(array $params)
     {
@@ -492,7 +492,7 @@ class Order extends BaseRequest
      * 查询订单详情信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function detail(array $params)
     {
@@ -503,7 +503,7 @@ class Order extends BaseRequest
      * 查询门店订单列表信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function list(array $params)
     {
@@ -514,7 +514,7 @@ class Order extends BaseRequest
      * 门店日账单查询接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function billList(array $params)
     {
@@ -525,7 +525,7 @@ class Order extends BaseRequest
      * 修改订单备注.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function remarkUpdate(array $params)
     {
@@ -536,7 +536,7 @@ class Order extends BaseRequest
      * 售后审批.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function refundAudit(array $params)
     {

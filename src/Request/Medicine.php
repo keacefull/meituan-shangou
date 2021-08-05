@@ -8,7 +8,7 @@ class Medicine extends BaseRequest
      * 创建药品分类.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function catSave(array $params)
     {
@@ -19,7 +19,7 @@ class Medicine extends BaseRequest
      * 更新药品分类.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function catUpdate(array $params)
     {
@@ -30,7 +30,7 @@ class Medicine extends BaseRequest
      * 删除药品分类.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function catDelete(array $params)
     {
@@ -41,7 +41,7 @@ class Medicine extends BaseRequest
      * 查询门店药品分类列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function catList(array $params)
     {
@@ -52,7 +52,7 @@ class Medicine extends BaseRequest
      * 创建药品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function save(array $params)
     {
@@ -63,7 +63,7 @@ class Medicine extends BaseRequest
      * 更新药品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function update(array $params)
     {
@@ -74,7 +74,7 @@ class Medicine extends BaseRequest
      * 批量创建药品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchsave(array $params)
     {
@@ -85,7 +85,7 @@ class Medicine extends BaseRequest
      * 批量更新药品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchupdate(array $params)
     {
@@ -96,7 +96,7 @@ class Medicine extends BaseRequest
      * 删除药品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function delete(array $params)
     {
@@ -107,7 +107,7 @@ class Medicine extends BaseRequest
      * 查询门店药品列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function list(array $params)
     {
@@ -118,7 +118,7 @@ class Medicine extends BaseRequest
      * 批量更新药品库存.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function stock(array $params)
     {
@@ -129,7 +129,7 @@ class Medicine extends BaseRequest
      * 批量更新药品价格
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function price(array $params)
     {
@@ -140,7 +140,7 @@ class Medicine extends BaseRequest
      * 批量更新 app_medicine_code.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function codeUpdate(array $params)
     {
@@ -151,7 +151,7 @@ class Medicine extends BaseRequest
      * 药品批量上下架.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function isSoldOut(array $params)
     {
@@ -162,7 +162,7 @@ class Medicine extends BaseRequest
      * 查询任务进程.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function taskStatus(array $params)
     {

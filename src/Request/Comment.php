@@ -8,7 +8,7 @@ class Comment extends BaseRequest
      * 根据门店id批量查询评价信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function query(array $params)
     {
@@ -19,7 +19,7 @@ class Comment extends BaseRequest
      * 根据评价id添加商家回复.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function addReply(array $params)
     {
@@ -30,7 +30,7 @@ class Comment extends BaseRequest
      * 通过门店ID获取当前门店评分.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function score(array $params)
     {

@@ -7,7 +7,7 @@ class Im extends BaseRequest
     /**
      * 获取长连接的token.
      *
-     * @return string
+     * @return mixed
      */
     public function getConnectionToken()
     {
@@ -17,7 +17,7 @@ class Im extends BaseRequest
     /**
      * 查询门店IM状态.
      *
-     * @return string
+     * @return mixed
      */
     public function getPoiIMStatus(array $params)
     {
@@ -28,7 +28,7 @@ class Im extends BaseRequest
      * 设置门店IM状态.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function setPoiIMStatus(array $params)
     {
@@ -39,7 +39,7 @@ class Im extends BaseRequest
      * 设置门店IM线上状态.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function setPoiIMOnlineStatus(array $params)
     {
@@ -50,7 +50,7 @@ class Im extends BaseRequest
      * 设置消息已读状态.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function msgRead(array $params)
     {
@@ -61,7 +61,7 @@ class Im extends BaseRequest
      * 设置门店IM群会话状态.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function setPoiIMGroupSwitch(array $params)
     {
@@ -72,7 +72,7 @@ class Im extends BaseRequest
      * IM群聊管理门店群公告.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function managePoiImGroupNotice(array $params)
     {
@@ -83,7 +83,7 @@ class Im extends BaseRequest
      * 查看门店IM群列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getPoiImGroupList(array $params)
     {
@@ -94,7 +94,7 @@ class Im extends BaseRequest
      * 查询IM门店消息服务分.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getPoiImServiceScore(array $params)
     {
@@ -105,7 +105,7 @@ class Im extends BaseRequest
      * 闪购开放平台app下门店组列表数据.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function listPoiGroupInfoList(array $params)
     {
@@ -116,7 +116,7 @@ class Im extends BaseRequest
      * 门店组关联客服账号.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function addAccountToGroup(array $params)
     {

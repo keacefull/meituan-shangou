@@ -8,7 +8,7 @@ class Shipping extends BaseRequest
      * 创建或更新门店配送范围.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function save(array $params)
     {
@@ -19,7 +19,7 @@ class Shipping extends BaseRequest
      * 获取门店配送范围自配送
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function list(array $params)
     {
@@ -30,7 +30,7 @@ class Shipping extends BaseRequest
      * 批量创建或更新配送范围.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchsave(array $params)
     {
@@ -41,7 +41,7 @@ class Shipping extends BaseRequest
      * 获取门店配送范围混合送
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fetch(array $params)
     {
@@ -52,7 +52,7 @@ class Shipping extends BaseRequest
      * 删除配送范围.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function delete(array $params)
     {
@@ -63,7 +63,7 @@ class Shipping extends BaseRequest
      * 新增或更新特殊时段配送范围.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function specSave(array $params)
     {

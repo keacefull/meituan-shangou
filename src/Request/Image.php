@@ -8,7 +8,7 @@ class Image extends BaseRequest
      * 图片上传API.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function upload(array $params)
     {

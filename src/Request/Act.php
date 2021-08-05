@@ -8,7 +8,7 @@ class Act extends BaseRequest
      * 批量创建/更新第二份半价商品（本接口预计2020年2月26日下线，建议接入“第N件优惠”活动接口。）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      * @deprecated
      */
     public function secondHalfBatchSave(array $params)
@@ -20,7 +20,7 @@ class Act extends BaseRequest
      * 批量删除第二份半价商品（本接口预计2020年2月26日下线，建议接入“第N件优惠”活动接口。）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      * @deprecated
      */
     public function secondHalfDelete(array $params)
@@ -32,7 +32,7 @@ class Act extends BaseRequest
      * 批量修改第二份半价商品当日活动库存（本接口预计2020年2月26日下线，建议接入“第N件优惠”活动接口。）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      * @deprecated
      */
     public function secondHalfStock(array $params)
@@ -44,7 +44,7 @@ class Act extends BaseRequest
      * 批量查询门店第二份半价商品（本接口预计2020年2月26日下线，建议接入“第N件优惠”活动接口。）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      * @deprecated
      */
     public function secondHalfList(array $params)
@@ -56,7 +56,7 @@ class Act extends BaseRequest
      * 批量创建买赠活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function buyGiftsBatchSave(array $params)
     {
@@ -67,7 +67,7 @@ class Act extends BaseRequest
      * 批量删除买赠活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function buyGiftsDelete(array $params)
     {
@@ -78,7 +78,7 @@ class Act extends BaseRequest
      * 批量修改买赠活动当日活动库存.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function buyGiftsStock(array $params)
     {
@@ -89,7 +89,7 @@ class Act extends BaseRequest
      * 批量查询门店买赠活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function buyGiftsList(array $params)
     {
@@ -100,7 +100,7 @@ class Act extends BaseRequest
      * 批量创建指定商品满减活动或创建店内满减活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountBatchSave(array $params)
     {
@@ -111,7 +111,7 @@ class Act extends BaseRequest
      * 批量查询指定商品满减活动或店内满减活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountList(array $params)
     {
@@ -122,7 +122,7 @@ class Act extends BaseRequest
      * 批量删除指定商品满减活动或店内满减活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountDelete(array $params)
     {
@@ -133,7 +133,7 @@ class Act extends BaseRequest
      * 批量添加活动商品至指定商品满减活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountFoodsBatchSave(array $params)
     {
@@ -144,7 +144,7 @@ class Act extends BaseRequest
      * 批量查询指定商品满减活动中的活动商品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountFoodsList(array $params)
     {
@@ -155,7 +155,7 @@ class Act extends BaseRequest
      * 批量删除指定商品满减活动中活动商品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountFoodsDelete(array $params)
     {
@@ -166,7 +166,7 @@ class Act extends BaseRequest
      * 批量修改指定商品满减活动中商品的当日活动库存.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountFoodsDayLimit(array $params)
     {
@@ -177,7 +177,7 @@ class Act extends BaseRequest
      * 批量创建阶梯满减配送费活动（本接口预计2020年2月5日下线）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountShippingFeeBatchSave(array $params)
     {
@@ -188,7 +188,7 @@ class Act extends BaseRequest
      * 查询阶梯满减配送费活动（本接口预计2020年2月5日下线）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountShippingFeeList(array $params)
     {
@@ -199,7 +199,7 @@ class Act extends BaseRequest
      * 批量删除阶梯满减配送费活动（本接口预计2020年2月5日下线）.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function fullDiscountShippingFeeBatchDelete(array $params)
     {
@@ -210,7 +210,7 @@ class Act extends BaseRequest
      * 批量创建或更新零售折扣商品和爆品商品活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function retailDiscountBatchSave(array $params)
     {
@@ -221,7 +221,7 @@ class Act extends BaseRequest
      * 查询门店零售折扣商品和爆品商品活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function retailDiscountList(array $params)
     {
@@ -232,7 +232,7 @@ class Act extends BaseRequest
      * 批量删除零售折扣商品和和爆品商品活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function retailDiscountBatchDelete(array $params)
     {
@@ -243,7 +243,7 @@ class Act extends BaseRequest
      * 批量修改零售折扣商品和爆品商品当日活动库存.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function retailDiscountBatchStock(array $params)
     {
@@ -254,7 +254,7 @@ class Act extends BaseRequest
      * 批量修改零售折扣商品和爆品商品活动每单限购数量.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function retailDiscountBatchLimit(array $params)
     {
@@ -265,7 +265,7 @@ class Act extends BaseRequest
      * 批量新增商家券（店内发券）活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function instoreCouponBatchSave(array $params)
     {
@@ -276,7 +276,7 @@ class Act extends BaseRequest
      * 批量删除商家券（店内发券）活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function instoreCouponDelete(array $params)
     {
@@ -287,7 +287,7 @@ class Act extends BaseRequest
      * 查询商家券（店内发券）活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function instoreCouponList(array $params)
     {
@@ -298,7 +298,7 @@ class Act extends BaseRequest
      * 创建/更新X元M件活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function itemBundlesSave(array $params)
     {
@@ -309,7 +309,7 @@ class Act extends BaseRequest
      * 查询X元M件活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function itemBundlesList(array $params)
     {
@@ -320,7 +320,7 @@ class Act extends BaseRequest
      * 批量删除X元M件活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function itemBundlesBatchDelete(array $params)
     {
@@ -331,7 +331,7 @@ class Act extends BaseRequest
      * 查询X元M件活动中的商品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function itemBundlesFoodsList(array $params)
     {
@@ -342,7 +342,7 @@ class Act extends BaseRequest
      * 删除X元M件活动中的商品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function itemBundlesFoodsBatchDelete(array $params)
     {
@@ -353,7 +353,7 @@ class Act extends BaseRequest
      * 加价购批量新增或者更新接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function markupRepurchaseBatchSave(array $params)
     {
@@ -364,7 +364,7 @@ class Act extends BaseRequest
      * 删除加价换购营销活动接口.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function markupRepurchaseDelete(array $params)
     {
@@ -375,7 +375,7 @@ class Act extends BaseRequest
      * 查询加价购活动商品明细.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function markupRepurchaseFoodList(array $params)
     {
@@ -386,7 +386,7 @@ class Act extends BaseRequest
      * 查询门店内的所有加价购活动信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function markupRepurchaseList(array $params)
     {
@@ -397,7 +397,7 @@ class Act extends BaseRequest
      * 创建商品券活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function goodsCouponSave(array $params)
     {
@@ -408,7 +408,7 @@ class Act extends BaseRequest
      * 删除商品券活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function goodsCouponDelete(array $params)
     {
@@ -419,7 +419,7 @@ class Act extends BaseRequest
      * 查询门店下商品券活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function goodsCouponList(array $params)
     {
@@ -430,7 +430,7 @@ class Act extends BaseRequest
      * 批量查询商品券活动中的商品
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function goodsCouponGoodsList(array $params)
     {
@@ -441,7 +441,7 @@ class Act extends BaseRequest
      * 创建/更新第N件优惠活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function nthDiscountSave(array $params)
     {
@@ -452,7 +452,7 @@ class Act extends BaseRequest
      * 删除第N件优惠活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function nthDiscountDelete(array $params)
     {
@@ -464,7 +464,7 @@ class Act extends BaseRequest
      * 查询第N件优惠活动信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function nthDiscountInfo(array $params)
     {
@@ -475,7 +475,7 @@ class Act extends BaseRequest
      * 查询第N件优惠活动中的商品信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function nthDiscountProducts(array $params)
     {
@@ -486,7 +486,7 @@ class Act extends BaseRequest
      * 查询商品参加的活动.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function allGetByAppFoodCodes(array $params)
     {
@@ -497,7 +497,7 @@ class Act extends BaseRequest
      * 修改折扣/爆品活动门店级每单限购商品总数.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function retailDiscountProductCount(array $params)
     {
@@ -508,7 +508,7 @@ class Act extends BaseRequest
      * 查询门店内活动信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getByAppPoiCodeAndType(array $params)
     {
@@ -519,7 +519,7 @@ class Act extends BaseRequest
      * 将门店商品从所参加的活动中删除.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function deleteActsByProducts(array $params)
     {

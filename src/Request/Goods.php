@@ -7,7 +7,7 @@ class Goods extends BaseRequest
     /**
      * 查询商品类目.
      *
-     * @return string
+     * @return mixed
      */
     public function getCategory()
     {
@@ -17,7 +17,7 @@ class Goods extends BaseRequest
     /**
      * 查询商品类目属性.
      *
-     * @return string
+     * @return mixed
      */
     public function getCategoryProperty(array $params)
     {
@@ -28,7 +28,7 @@ class Goods extends BaseRequest
      * 查询商品标准规格信息.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getCategoryStandard(array $params)
     {
@@ -39,7 +39,7 @@ class Goods extends BaseRequest
      * 查询运费模板.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function getDeliveryTemplate(array $params)
     {
@@ -50,7 +50,7 @@ class Goods extends BaseRequest
      * 商品图片上传.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function imageUpload(array $params)
     {
@@ -61,7 +61,7 @@ class Goods extends BaseRequest
      * 创建商品.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function create(array $params)
     {
@@ -72,7 +72,7 @@ class Goods extends BaseRequest
      * 更新商品.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function update(array $params)
     {
@@ -83,7 +83,7 @@ class Goods extends BaseRequest
      * 查询商品详情.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function detail(array $params)
     {
@@ -94,7 +94,7 @@ class Goods extends BaseRequest
      * 查询门店商品列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function list(array $params)
     {
@@ -105,7 +105,7 @@ class Goods extends BaseRequest
      * 批量修改sku库存.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchUpdateStock(array $params)
     {
@@ -116,7 +116,7 @@ class Goods extends BaseRequest
      * 批量修改sku价格.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function batchUpdatePrice(array $params)
     {
@@ -127,7 +127,7 @@ class Goods extends BaseRequest
      * 团好货查询商品品牌列表.
      *
      * @param array $params
-     * @return string
+     * @return mixed
      */
     public function brandList(array $params)
     {
