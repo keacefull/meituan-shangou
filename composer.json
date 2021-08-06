@@ -2,7 +2,7 @@
     "name": "keacefull/meituan-shangou",
     "description": "美团闪购开放平台 PHP SDK",
     "require": {
-        "php": ">=8.0",
+        "php": ">=7.3",
         "ext-fileinfo": "*",
         "ext-openssl": "*",
         "ext-simplexml": "*",
