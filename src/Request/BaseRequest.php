@@ -86,6 +86,11 @@ class BaseRequest
     public function getToken(): string
     {
 
+        if (!empty($this->config->access_token))
+        {
+            return $this->config->access_token;
+        }
+
         if ($token = $this->cache->get($this->key)) {
             return $token;
         }
