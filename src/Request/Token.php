@@ -16,7 +16,7 @@ class Token extends BaseRequest
     {
         $response = $this->get('oauth/authorize',
             [
-                'response_type' => 'code',
+                'response_type' => 'authorization_code',
                 'code' => $code
             ]
         );
