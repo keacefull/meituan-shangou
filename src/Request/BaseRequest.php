@@ -32,23 +32,39 @@ class BaseRequest
             'app_id' => $this->config->app_id,
             'app_poi_code' => $this->config->app_poi_code
         ];
-        if (!isset($options['response_type']) || $options['response_type'] != 'token')
-        {
-            $options['access_token'] = $this->getToken();
+        if ($action != 'oauth/authorize' && $action != 'oauth/token') {
+            $options['access_token'] = $this->config->access_token;
         }
         $options = array_merge($params_head, $options);
-        $sig = $this->generateSignature($this->config->request_url.$action, $options);
+        $sig = $this->generateSignature($this->config->request_url . $action, $options);
         $options['sig'] = $sig;
 
-        $url = $this->config->request_url.$action;
+        $url = $this->config->request_url . $action;
 
         return $this->client->request("GET", ltrim($url, '/'), ['query' => $options])->toArray();
     }
 
+    protected function post($action, array $params = [])
+    {
+        $params_head = [
+            'timestamp' => time(),
+            'app_id' => $this->config->app_id,
+            'app_poi_code' => $this->config->app_poi_code
+        ];
+        $params = array_merge($params_head, $params);
+        if ($action != 'oauth/authorize' && $action != 'oauth/token') {
+            $params['access_token'] = $this->config->access_token;
+        }
+        $url = $this->config->request_url . $action;
+        $sig = $this->generateSignature($url, $params);
+        $params['sig'] = $sig;
+        return $this->client->request("POST", $url, ['body' => $params])->toArray();
+    }
+    
     private function generateSignature($action, $params)
     {
         $params = $this->concatParams($params);
-        $str = $action.'?'.$params.$this->config->app_secret;
+        $str = $action . '?' . $params . $this->config->app_secret;
 
         return md5($str);
     }
@@ -61,54 +77,10 @@ class BaseRequest
         ksort($params);
         $pairs = [];
         foreach ($params as $key => $val) {
-            array_push($pairs, $key.'='.$val);
+            array_push($pairs, $key . '=' . $val);
         }
 
         return join('&', $pairs);
-    }
-
-    protected function post($action, array $params = [])
-    {
-        $params_head = [
-            'timestamp' => time(),
-            'app_id' => $this->config->app_id,
-            'app_poi_code' => $this->config->app_poi_code
-        ];
-        $params = array_merge($params_head, $params);
-        $params['access_token'] = $this->getToken();
-        $url = $this->config->request_url.$action;
-        $sig = $this->generateSignature($url, $params);
-        $params['sig'] = $sig;
-        return $this->client->request("POST", ltrim($url, '/'), ['body' => $params])->toArray();
-    }
-
-
-    public function getToken(): string
-    {
-
-        if (!empty($this->config->access_token))
-        {
-            return $this->config->access_token;
-        }
-
-        if ($token = $this->cache->get($this->key)) {
-            return $token;
-        }
-
-        $response = $this->get('oauth/authorize',
-            [
-                'response_type' => 'token'
-            ]
-        );
-
-        if (empty($response['access_token'])) {
-            throw new \Exception('Failed to get access_token.');
-        }
-
-        $this->cache->set($this->key, $response['access_token'], \abs(\intval($response['expires_in']) - 100));
-        $this->cache->set($this->refresh_key, $response['refresh_token'], \abs(\intval($response['re_expires_in']) - 100));
-
-        return $response['access_token'];
     }
 
 }

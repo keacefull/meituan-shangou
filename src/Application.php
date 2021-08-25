@@ -3,6 +3,7 @@
 namespace Keacefull\MeituanShangou;
 
 use Keacefull\MeituanShangou\Request\Act;
+use Keacefull\MeituanShangou\Request\BaseRequest;
 use Keacefull\MeituanShangou\Request\Comment;
 use Keacefull\MeituanShangou\Request\Goods;
 use Keacefull\MeituanShangou\Request\GroupBuy;

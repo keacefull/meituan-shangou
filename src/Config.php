@@ -33,7 +33,7 @@ class Config
         $this->app_id = $config['app_id'];
         $this->app_secret = $config['app_secret'];
         $this->app_poi_code = $config['app_poi_code'];
-        $this->access_token = $config['access_token'];
+        !empty($config['access_token']) && $this->access_token = $config['access_token'];
 
         if (! empty($config['request_url'])) {
             $this->request_url = $config['request_url'];
