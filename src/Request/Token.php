@@ -14,13 +14,12 @@ class Token extends BaseRequest
      */
     public function getToken(string $code)
     {
-        $response = $this->get('oauth/authorize',
+        $response = $this->post('oauth/token',
             [
-                'response_type' => 'authorization_code',
+                'grant_type' => 'authorization_code',
                 'code' => $code
             ]
         );
-
         if (empty($response['access_token'])) {
             throw new \Exception('Failed to get access_token.');
         }
