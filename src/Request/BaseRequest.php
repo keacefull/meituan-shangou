@@ -22,7 +22,7 @@ class BaseRequest
     {
         $this->config = $config;
         $this->client = $client;
-        $this->cache = new Psr16Cache(new FilesystemAdapter(namespace: 'meituanshaoshou', defaultLifetime: 1500));
+        $this->cache = new Psr16Cache(new FilesystemAdapter('meituanshaoshou',1500));
     }
 
     protected function get($action, array $options = [])
@@ -60,7 +60,7 @@ class BaseRequest
         $params['sig'] = $sig;
         return $this->client->request("POST", $url, ['body' => $params])->toArray();
     }
-    
+
     private function generateSignature($action, $params)
     {
         $params = $this->concatParams($params);
